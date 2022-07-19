@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sml.mapper.LocationMapper">
+
+
+    <select id="findAll" resultType="Location">
+        select pkey,
+name,
+description,
+order_id,
+coline_id,
+is_display_only,
+display_name,
+type_name,
+created_by,
+date(date_created),
+modified_by,
+date(date_modified)
+from location
+</select>
+
+</mapper>

@@ -1,0 +1,37 @@
+server:
+  port: 8081
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.sml.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    datasource1:
+      url: jdbc:mysql://192.168.0.105:3306/web_scada?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8&useSSL=false
+      username: root
+      password: Ste123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    datasource2:
+      url: jdbc:sqlite:D:/360/studytest.db
+      username:
+      password:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: org.sqlite.JDBC
+    datasource3:
+      url: jdbc:sqlite:OCC.WithoutPW.db
+      username:
+      password:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: org.sqlite.JDBC
